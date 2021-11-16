@@ -134,7 +134,9 @@ a{
 	font-size: 48px;
 	margin: 0;
 	text-align: center;
-	
+	.media-max(500px, {
+		font-size: 40px;
+	});
 }
 
 .btn-mobile{
@@ -194,28 +196,27 @@ a{
 		}
 
 	}
-    		
+
 
 	.media-max(777px,{
 		display: inline-block;
 		vertical-align: middle;
 	});
-	
+
 }
 
 /* General */
 
 .banner{
-	    padding-top: 190px;
-		padding-bottom: 265px;
-		background-image: url(../img/bg.jpg);
-		background-size: cover;
-		background-position: center;
-		margin-bottom: 170px;
-		.media-max(520px, {
-			padding-top: 95px;
-			padding-bottom: 135px;
-		});
+	padding-top: 190px;
+	padding-bottom: 265px;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	.media-max(520px, {
+		padding-top: 95px;
+		padding-bottom: 135px;
+	});
 
 
 	&__text{
@@ -302,12 +303,19 @@ body{
 }
 
 .menu{
-	padding-top: 0;
+	padding-top: 170px;
 	padding-bottom: 85px;
+	.media-max(650px, {
+		padding-top: 85px;
+		padding-bottom: 65px;
+	});
 
 	&__h{
 		font-weight: @fontNormal;
 		margin-bottom: 26px;
+		.media-max(500px, {
+			font-size: 30px;
+		});
 	}
 
 	&__text{
@@ -318,13 +326,15 @@ body{
 		font-size: 14px;
 		color: @colorTGraSection;
 		margin-bottom: 52px;
+		.media-max(500px, {
+			width: 75%;
+		});
 	}
 
 	&__tabs{
 		margin-bottom: 40px;
 		margin-right: 10px;
 		list-style: none;
-	}
 }
 
 .tabs{
@@ -332,6 +342,8 @@ body{
 	justify-content: center;
 	align-items: baseline;
 	padding: 0;
+	min-width: 280px;
+	overflow-x: auto;
 
 	&__item{
 		@offset: 4px;
@@ -674,4 +686,4 @@ body{
 		}
 }
 
-
+}
